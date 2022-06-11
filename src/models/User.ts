@@ -5,8 +5,11 @@ class User {
   @prop({required: true})
   public name? : string
 
-  @prop({require: true})
+  @prop({required: true})
   public message : string
+
+  @prop({required: true})
+  public date : string
 }
 
 

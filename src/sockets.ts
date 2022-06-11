@@ -13,7 +13,8 @@ export default (io:any) => {
       const newMesage = async () => {
         const message = await userModel.create({
           name: data.name,
-          message: data.message
+          message: data.message,
+          date: data.date
         })
         message.save()
         const newdata = await UserMode.find()

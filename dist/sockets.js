@@ -25,7 +25,8 @@ exports.default = (io) => {
             const newMesage = () => __awaiter(void 0, void 0, void 0, function* () {
                 const message = yield User_2.default.create({
                     name: data.name,
-                    message: data.message
+                    message: data.message,
+                    date: data.date
                 });
                 message.save();
                 const newdata = yield User_1.default.find();

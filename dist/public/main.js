@@ -8,16 +8,26 @@ socket.on('message_user', (data) => {
 const render = (data) => {
     let html = data.map((x) => {
         return `
-      <p> <strong> ${x.name} </strong> : ${x.message}</p>
+      <p> ${x.date} <strong> ${x.name} </strong> : ${x.message}</p>
     `;
     }).join(' ');
     document.querySelector('#message').innerHTML = html;
 };
 
+const time = new Date(),
+    hours = time.getHours(),
+    minutes = time.getMinutes()
+    str_minutos = new String(minutes)
+    if (str_minutos.lengt == 1) {
+       minutes = `0${minutes}`
+    }
+    timeMessage = `${hours}:${minutes}`
+
 const addChat = () => {
     const addChat = {
         "name": document.querySelector('#nb').value,
-        "message": document.querySelector('#msn').value
+        "message": document.querySelector('#msn').value,
+        "date": timeMessage
     };
 
     console.log(addChat);

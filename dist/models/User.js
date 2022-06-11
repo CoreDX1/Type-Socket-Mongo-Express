@@ -17,8 +17,12 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "name", void 0);
 __decorate([
-    (0, typegoose_1.prop)({ require: true }),
+    (0, typegoose_1.prop)({ required: true }),
     __metadata("design:type", String)
 ], User.prototype, "message", void 0);
+__decorate([
+    (0, typegoose_1.prop)({ required: true }),
+    __metadata("design:type", String)
+], User.prototype, "date", void 0);
 const UserMode = (0, typegoose_1.getModelForClass)(User);
 exports.default = UserMode;
